@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <title>Vamos aprender Web Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="icone16.ico">
+  </head>
+  <body>
+    <header id="header">
+      <img id="logo" src="logo.png" alt="um logotipo">
+      <h1>Vamos aprender WebDesign</h1>
+    </header>
+
+    <main>
+      <section id="start">
+        <p>Vamos imaginar que tens um produto ou um portofolio ou uma ideia e que queres vender, mostrar ou partilhar com o mundo. Qual a melhor forma de o fazeres?<br>Talvez com o <strong>teu próprio</strong> website. Mas antes de colocares um site <i>online</i>, queres ter uma coisa com aspecto profissional ou pelo menos com um aspeto <strong>decente</strong>.</p>
+        <p>Então por onde vais <a class="step" data-step="0" href="#content">começar</a>?</p>
+      </section>
+
+      <section id="content" class="animate">
+        <h2>Conteúdo</h2>
+        <p>O objetivo do <strong>design</strong> é melhorar a apresentação do conteúdo ao qual é aplicado. Pode parecer óbvio, mas o conteúdo, sendo o elemento <strong> principal </strong> de um website, não deve ser deixado para o fim.</p>
+        <p>O conteúdo escrito, como este parágrafo que estás a ler agora, representa mais de 90% dos conteúdos da Web e o estilo que dás a um texto é uma grande ajuda para os leitores (ou não, e neste caso os visitantes não ficam muito tempo no teu site).</p>
+		  <p>Vamos supor que já tens um ficheiro <code>HTML</code> com alguns parágrafos de texto que queres publicar e também já criaste um arquivo <code>style.css</code> vazio e até o ligaste ao <code>HTML</code> com uma <code>TAG</code> na <code>HEAD</code>, qual é a <a class="step" data-step="1" href="#centering">primeira declaração</a> que vais escrever?</p>
+      </section>
+
+      <section id="centering" class="animate">
+        <h2>Centrar</h2>
+        <p>Texto muito longo é mais difícil de analisar e também de <strong>ler</strong>. Definir um limite de caracteres por linha melhora muito a legibilidade e o apelo à leitura perante uma parede de texto corrido.</p>
+<pre><span class="selector">body</span> {
+  <span class="attribute">margin</span>: <span class="number">0</span> auto;
+  <span class="attribute">max-width</span>: <span class="number">50</span><span class="unit">em</span>;
+}</pre>
+        <p>Depois de estilizar os <em>blocos</em> de texto, podemos pensar em tratar do <a class="step" data-step="2" href="#font-family">próprio texto</a>!</p>
+      </section>
+
+      <section id="font-family" class="animate">
+        <h2>Familias de fontes</h2>
+        <p>A fonte por defeito dos navegadores é a <code>"Times"</code>, que pode parecer um pouco simples (principalmente porque é a fonte "de fábrica"). Alterar para um tipo <strong>sem serifas</strong> como uma <code>"Helvetica"</code> ou uma <code>"Arial"</code> altera logo o aspeto de um site.</p>
+<pre><span class="selector">body</span> {
+  <span class="attribute">font-family</span>: <span class="string">"Helvetica"</span>, <span class="string">"Arial"</span>, sans-serif;
+}</pre>
+        <p><em>Mas se preferes uma fonte serifada recomendo que uses a <code>"Georgia"</code>.</em></p>
+        <p>Agora que melhorámos a fonte <em>esteticamente</em>, podemos também torná-la mais <a class="step" data-step="3" href="#spacing">legível</a>.</p>
+      </section>
+
+      <section id="spacing" class="animate">
+        <h2>Espaçamento</h2>
+        <p><strong>Espaço negativo</strong> é o quinto elemento crítico para o design, ao lado da tipografia, cor, fotografia e ilustração. A área em <em>volta</em> e <em>dentro</em> dos conteúdos que não possui nenhum tipo de informação mas que torna todo o site mais legível, fácil de compreender e esteticamente agradáveis.</p>
+<pre><span class="selector">body</span> {
+  <span class="attribute">line-height</span>: <span class="number">1.5</span>;
+  <span class="attribute">padding</span>: <span class="number">4</span><span class="unit">em</span> <span class="number">1</span><span class="unit">em</span>;
+}
+
+<span class="selector">h2</span> {
+  <span class="attribute">margin-top</span>: <span class="number">1</span><span class="unit">em</span>;
+  <span class="attribute">padding-top</span>: <span class="number">1</span><span class="unit">em</span>;
+}</pre>
+        <p>Apesar de termos melhorado todo o <i>layout</i> do site, ainda faltam <a class="step" data-step="4" href="#color-contrast">alguns pormenores</a>. &#128540;</p>
+      </section>
+
+      <section id="color-contrast" class="animate">
+        <h2>Cor &amp; contraste</h2>
+        <p>Texto preto em fundo branco, apesar do alto contraste, pode ser cansativo para os olhos. Usar um tom de preto mais suave (ou um cinzento muito escuro) pode tornar o texto mais <strong>confortável</strong> de ler.</p>
+<pre><span class="selector">body</span> {
+  <span class="attribute">color</span>: <span class="number">#555</span>;
+}</pre>
+        <p>Para manter um contraste maior em alguns casos vamos escolher um tom mais escuro para <strong>títulos e negritos</strong>.</p>
+<pre><span class="selector">h1</span>,
+<span class="selector">h2</span>,
+<span class="selector">strong</span> {
+  <span class="attribute">color</span>: <span class="number">#333</span>;
+}</pre>
+        <p>E já melhorámos muito esta página visualmente, mas podemos destacar alguns elementos, como as partes de código, para serem mais fáceis de <a class="step" data-step="5" href="#balance">identificar</a>.</p>
+      </section>
+
+      <section id="balance" class="animate">
+        <h2>Equilíbrio</h2>
+        <p>Apenas uns toques para a página ficar mais equilibrada:</p>
+<pre><span class="selector">code</span>,
+<span class="selector">pre</span> {
+  <span class="attribute">background</span>: <span class="number">#e4f0f5</span>;
+}
+
+<span class="selector">code</span> {
+  <span class="attribute">padding</span>: <span class="number">2</span>px <span class="number">4</span>px;
+  <span class="attribute">vertical-align</span>: text-bottom;
+}
+
+<span class="selector">pre</span> {
+  <span class="attribute">padding</span>: <span class="number">1</span>em;
+}</pre>
+        <p>A partir daqui o objetivo é destacar a página e seguir uma <a class="step" data-step="6" href="#primary-color">linha gráfica</a>.</p>
+      </section>
+
+      <section id="primary-color" class="animate">
+        <h2>Cor primária</h2>
+        <p>A maior parte das marcas tem uma <strong>cor primária</strong> que funciona como identidade. Num website, esta cor pode servir para enfatizar os elementos interativos, como as <strong>ligações</strong>.</p>
+<pre><span class="selector">a</span> {
+  <span class="attribute">color</span>: <span class="number">#e81c4f</span>;
+}</pre>
+        <p>Para manter o equilíbrio vamos acrescentar mais <a class="step" data-step="7" href="#secondary-colors">cores</a>.</p>
+      </section>
+
+      <section id="secondary-colors" class="animate">
+        <h2>Cores secundárias</h2>
+        <p>Uma cor de destaque pode ser complementada com tons mais <em>subtis</em>, para serem usados em molduras, planos de fundo ou até no corpo de texto.</p>
+<pre><span class="selector">body</span> {
+  <span class="attribute">color</span>: <span class="number">#566b78</span>;
+}
+
+<span class="selector">code</span>,
+<span class="selector">pre</span> {
+  <span class="attribute">background</span>: <span class="number">#f5f7f9</span>;
+  <span class="attribute">border-bottom</span>: <span class="number">1</span><span class="unit">px</span>solid<span class="number">#d8dee9</span>;
+  <span class="attribute">color</span>: <span class="number">#a7adba</span>;
+}
+
+<span class="selector">pre</span> {
+  <span class="attribute">border-left</span>: <span class="number">2</span><span class="unit">px</span>solid<span class="number">#69c</span>;
+}</pre>
+        <p>E se mexemos nas cores porque não alterar também as <a class="step" data-step="8" href="#custom-font">formas</a>...</p>
+      </section>
+
+      <section id="custom-font" class="animate"
+        <h2>Fonte personalizada</h2>
+        <p>Como o texto é o conteúdo principal de um website, usar um tipo de <strong>letra personalizado</strong> dá mais carácter ao nosso site.</p>
+        <p>Podes carregar para o servidor qualquer tipo de webfont ou usar um serviço próprio <i>online</i>. Existem vários, alguns são pagos, mas hoje vamos usar a fonte <code>"Roboto"</code> do serviço gratuito <a href="https://fonts.google.com" target="_blank">Google Fonts</a>:</p>
+<pre><span class="keyword">@import</span> <span class="string">'https://fonts.googleapis.com/css?family=Roboto:300,400,500'</span>;
+
+<span class="selector">body</span> {
+  <span class="attribute">font-family</span>: <span class="string">"Roboto"</span>, <span class="string">"Helvetica"</span>, <span class="string">"Arial"</span>, sans-serif;
+}</pre>
+        <p>Mas não é só de <em>texto</em> que é feito um website, aliás existe um tipo de conteúdo que vale por <a class="step" data-step="9" href="#images">mil palavras</a>...</p>
+      </section>
+
+      <section id="images" class="animate">
+        <h2>
+          <img src="images.png" alt="patos no lago">
+        </h2>
+        <p>Imagens, gráficos e ícones podem ser usados como complementos para ilustrar um conteúdo ou serem a própria mensagem que se deseja transmitir.</p>
+        <p>Vamos colocar uma imagem no <strong>cabeçalho desta página</strong>.</p>
+<pre><span class="selector">header</span> {
+  <span class="attribute">background-color</span>: <span class="number">#263d36</span>;
+  <span class="attribute">background-image</span>: url(<span class="string">"header.jpg"</span>);
+  <span class="attribute">background-position</span>: center top;
+  <span class="attribute">background-repeat</span>: no-repeat;
+  <span class="attribute">background-size</span>: cover;
+  <span class="attribute">line-height</span>: <span class="number">1.2</span>;
+  <span class="attribute">padding</span>: <span class="number">10</span><span class="unit">vw</span> <span class="number">2</span><span class="unit">em</span>;
+  <span class="attribute">text-align</span>: center;
+}</pre>
+        <p>Colocamos também um <strong>logotipo</strong></p>
+<pre><span class="selector">header img</span> {
+  <span class="attribute">display</span>: inline-block;
+  <span class="attribute">height</span>: <span class="number">120</span><span class="unit">px</span>;
+  <span class="attribute">vertical-align</span>: top;
+  <span class="attribute">width</span>: <span class="number">120</span><span class="unit">px</span>;
+}</pre>
+        <p>E aproveitamos para melhorar ainda mais os estilos de texto. Assim temos um título do site merecedor do registo.</p>
+<pre><span class="selector">header h1</span> {
+  <span class="attribute">color</span>: white;
+  <span class="attribute">font-size</span>: <span class="number">2.5</span><span class="unit">em</span>;
+  <span class="attribute">font-weight</span>: <span class="number">300</span>;
+}
+
+<span class="selector">header a</span> {
+  <span class="attribute">border</span>: <span class="number">1</span><span class="unit">px</span> solid <span class="number">#e81c4f</span>;
+  <span class="attribute">border-radius</span>: <span class="number">290486</span><span class="unit">px</span>;
+  <span class="attribute">color</span>: white;
+  <span class="attribute">font-size</span>: <span class="number">0.6</span><span class="unit">em</span>;
+  <span class="attribute">letter-spacing</span>: <span class="number">0.2</span><span class="unit">em</span>;
+  <span class="attribute">padding</span>: <span class="number">1</span><span class="unit">em</span> <span class="number">2</span><span class="unit">em</span>;
+  <span class="attribute">text-transform</span>: uppercase;
+  <span class="attribute">text-decoration</span>: none;
+  <span class="attribute">transition</span>: none <span class="number">200</span><span class="unit">ms</span> ease-out;
+  <span class="attribute">transition-property</span>: color, background;
+}
+
+<span class="selector">header a:hover</span> {
+  <span class="attribute">background</span>:  <span class="number">#e81c4f</span>;
+  <span class="attribute">color</span>: white;
+}</pre>
+        <p>E pronto! Construimos uma página decente em alguns minutos, seguindo alguns princípios de design e com código <code>HTML</code> e <code>CSS</code>. Agora só falta uma última <a class="step" data-step="10" href="#footer">coisa</a>...</p>
+      </section>
+
+      <footer id="footer" class="animate">
+        <a class="button" href="https://www.instagram.com/jland2012/" target="_blank">Faz-me um <i>like</i></a>
+		  <br><br>
+		  
+		  <p>Clica <a href="#header">aqui</a> para veres esta página completa e seguires as instruções.<br>A estrutura vai ser igual, mas com conteúdos personalizados teus!<br>Prepara o teu conteúdo: textos, fotografias, gráficos, os ficheiros <code>HTML</code> e <code>CSS</code> e começa a tua página.</p>
+		  
+      </footer>
+    </main>
+
+<script type="text/javascript">
+
+var steps = document.querySelectorAll('.step');
+var body = document.querySelector('body');
+var html = document.querySelector('html');
+
+for (var i=0; i < steps.length; i++) {
+  var element = steps[i];
+  element.onclick = function(event) {
+    var number = this.dataset.step;
+    var target = this.href;
+    addStep(number, target);
+  }
+};
+
+function removeVisited() {
+  if (document.getElementById('visited')) {
+    body.removeChild(document.getElementById('visited'));
+  }
+}
+
+function addStep(number, target) {
+  html.className += ' step' + number;
+
+  removeVisited();
+
+  if (target !== '') {
+    var id = target.split('#')[1];
+    document.getElementById(id).className = 'animate';
+  }
+
+  if (number === '7') {
+    loadGoogleFont();
+  }
+}
+
+visited.onclick = function() {
+  loadGoogleFont();
+  for (var i=0; i < 11; i++) {
+    html.className += ' step' + i;
+  }
+  removeVisited();
+}
+
+WebFontConfig = {
+  google: {
+    families: ['Roboto:300,400,500']
+  }
+};
+
+function loadGoogleFont() {
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+    s.parentNode.insertBefore(wf, s);
+  })(document);
+}
+
+</script>
+  </body>
+</html>

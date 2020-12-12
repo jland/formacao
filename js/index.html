@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Exercício JS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+	<link rel="stylesheet" type="text/css" href="pushbar.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<aside data-pushbar-id="left" data-pushbar-direction="left">
+		<div class="title"><span data-pushbar-close class="close push_right"></span> Menu da esquerda</div>
+		<ul class="menu">
+			<li>copia esta linha para mais links</li>
+		</ul>
+	</aside>
+	<aside data-pushbar-id="right" data-pushbar-direction="right">
+		<div class="title"><span data-pushbar-close class="close push_right"></span> Direita</div>
+		<ul class="menu">
+			<li>copia esta linha para mais links</li>
+		</ul>
+	</aside>
+	<aside data-pushbar-id="top" data-pushbar-direction="top">
+		<div class="title"><span data-pushbar-close class="close push_right"></span> Cabeçalho</div>
+		<ul class="menu">
+			<li>copia esta linha para mais links</li>
+		</ul>
+	</aside>
+	<aside data-pushbar-id="bottom" data-pushbar-direction="bottom">
+		<div class="title"><span data-pushbar-close class="close push_right"></span> Rodapé</div>
+		<ul class="menu">
+			<li>copia esta linha para mais links</li>
+		</ul>
+	</aside>
+	<main class="pushbar_main_content">
+		<div class="wrapper">
+			<div class="card">
+				<div class="card_title">
+					<div style="display: flex; align-items: center;">
+						<span style="flex:1;">Exercício</span>
+					</div>
+					<div class="small" style="margin-top: 10px;">Para fazeres este exercício podes ver o código desta página para perceberes como foi construida.
+					</div>
+					<div class="small">Também vais precisar de mais alguns ficheiros para editar.
+					</div>
+					<div><a href="ficheiros.zip" target="_blank" class="button getBtn">descarregar os ficheiros</a>
+					</div>
+				</div>
+				<div class="card_content">
+					<div><button data-pushbar-target="left">Esquerda</button></div>
+					<div><button data-pushbar-target="right">Direita</button></div>
+					<div><button data-pushbar-target="top">Cabeçalho</button></div>
+					<div><button data-pushbar-target="bottom">Rodapé</button></div>
+					<pre><code>
+						<strong>Como no CSS, o JavaScript também pode ser utilizado:</strong>
+						<br>
+						<br>
+						<ol>
+							<li>Em ficheiros externos (inlcuir);</li>
+							<li>Dentro do HTML (incorporar);</li>
+							<li>Ou ambos.</li>
+						</ol>
+						<p> Quando clicas nos botões acima aparecem os menus deste site. Para que isso aconteça este site tem uma ligação a um ficheiro de JavaScript. <br>Este ficheiro JS faz com que a parte de HTML e CSS que compoem os menus, apareçam e desapareçam.<br>O site que descarregaste ao clicar no botão acima, tem todo o JavaScript integrado no HTML.<br>O exercício é trocares a animação que está no site que descarregaste por um dos menus deste site, apenas um dos quatro, o que escolheres: o da esquerda ou o da direita ou o do cabeçalho ou o do rodapé.<br>No menu que escolheres e aplicares aos ficheiros descarregados, tens de colocar os links que já existem, mas neste novo menu.</p>
+					</code></pre>
+					<pre><code>
+						<strong>Instalação</strong>
+						<br>
+						<br>		
+						<ol>
+							<li>Acrescenta o pushbar.css ao index, antes do que já lá está;</li>
+							<li>O JavaScript é chamado pela <em>tag</em> <b>script</b> e não precisa de ser colocado no HEAD, pode ser colcado no fim do BODY, como podes ver no index que descarregaste.</li>
+							<li>Agora tens de alterar o que está no index (que mostra o menu ao centro) por este:<br>
+									
+							<textarea disabled style="min-height: 110px;">
+				<script type="text/javascript">
+					new Pushbar({
+					blur: true,
+					overlay: true,
+					});
+				</script>
+							</textarea>
+							</li>
+						</ol>
+					</code></pre>
+					<pre><code>
+						<strong>Ligar o JavaScript (JS)</strong>
+						<br>
+						<br>
+						<p>Também precisas de ligar o index ao ficheiro JS onde está o código que mostra e esconde o menu, coloca a linha seguinte antes do código que copiaste acima e verifica se o caminho para o ficheiro JS está correcto.</p>
+						
+							<textarea disabled>
+								<script type="text/javascript" src="pushbar.js"></script>
+							</textarea>
+					</code></pre>
+					<pre><code>
+						<strong>Novo botão</strong>
+						<br>
+						<br>
+						<p>Agora temos de trocar o botão do menu, retira os elementos do menu anterior:</p>
+						<textarea disabled style="min-height: 70px;">
+					<div class="one"></div>
+					<div class="two"></div>
+					<div class="three"></div>
+						</textarea>
+					<br>
+						<p>e coloca os elementos do novo botão. Apenas o que escolheste:</p>
+						<textarea disabled style="min-height: 100px;">
+					<div><button data-pushbar-target="left">Esquerda</button></div>
+					<div><button data-pushbar-target="right">Direita</button></div>
+					<div><button data-pushbar-target="top">Cabeçalho</button></div>
+					<div><button data-pushbar-target="bottom">Rodapé</button></div>
+						</textarea>
+					</code></pre>
+					<pre><code>
+						<strong>Barras</strong>
+						<br>
+						<br>
+						<p>Finalmente, coloca a parte do código relativa à tua barra escolhida logo a seguir à abertura do <em>tag</em> <b>BODY</b></p>
+				<textarea disabled style="min-height: 350px;">
+	<aside data-pushbar-id="left" data-pushbar-direction="left">
+		<div class="title"><span data-pushbar-close class="close push_right"></span> Menu da esquerda</div>
+		<ul class="menu">
+			<li>copia esta linha para mais links</li>
+		</ul>
+	</aside>
+	<aside data-pushbar-id="right" data-pushbar-direction="right">
+		<div class="title"><span data-pushbar-close class="close push_right"></span> Direita</div>
+		<ul class="menu">
+			<li>copia esta linha para mais links</li>
+		</ul>
+	</aside>
+	<aside data-pushbar-id="top" data-pushbar-direction="top">
+		<div class="title"><span data-pushbar-close class="close push_right"></span> Cabeçalho</div>
+		<ul class="menu">
+			<li>copia esta linha para mais links</li>
+		</ul>
+	</aside>
+	<aside data-pushbar-id="bottom" data-pushbar-direction="bottom">
+		<div class="title"><span data-pushbar-close class="close push_right"></span> Rodapé</div>
+		<ul class="menu">
+			<li>copia esta linha para mais links</li>
+		</ul>
+	</aside>
+			</textarea>			
+					</code></pre>
+					<pre><code>
+						<strong>E pronto, aplicaste um script externo de Javascript a uma página Web.</strong>
+						<p>Não te esqueças de acrescentar os links para o You Tube e Instagram ao novo menu e se quiseres viver perigosamente podes personalizar a página ao teu gosto.</p>
+					</code></pre>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script type="text/javascript" src="pushbar.js"></script>
+	<script type="text/javascript">
+			new Pushbar({
+			blur: true,
+			overlay: true,
+		});
+	</script>
+</body>
+
+</html>
