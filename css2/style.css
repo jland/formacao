@@ -120,6 +120,7 @@ html.step4 h1,
 html.step4 h2,
 html.step4 strong {
   color: #333;
+  font-weight: 700;
 }
 
 html.step4 a strong {

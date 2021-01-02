@@ -48,7 +48,7 @@
 
       <section id="spacing" class="animate">
         <h2>Espaçamento</h2>
-        <p><strong>Espaço negativo</strong> é o quinto elemento crítico para o design, ao lado da tipografia, cor, fotografia e ilustração. A área em <em>volta</em> e <em>dentro</em> dos conteúdos que não possui nenhum tipo de informação mas que torna todo o site mais legível, fácil de compreender e esteticamente agradáveis.</p>
+        <p><strong>Espaço negativo</strong> é um elemento crítico para o design, ao lado de outros como tipografia, cor, fotografia e composição, etc. A área em <em>volta</em> e <em>dentro</em> dos conteúdos que não possui nenhum tipo de informação mas que torna todo o site mais legível, fácil de compreender e esteticamente agradáveis.</p>
 <pre><span class="selector">body</span> {
   <span class="attribute">line-height</span>: <span class="number">1.5</span>;
   <span class="attribute">padding</span>: <span class="number">4</span><span class="unit">em</span> <span class="number">1</span><span class="unit">em</span>;
@@ -67,11 +67,10 @@
 <pre><span class="selector">body</span> {
   <span class="attribute">color</span>: <span class="number">#555</span>;
 }</pre>
-        <p>Para manter um contraste maior em alguns casos vamos escolher um tom mais escuro para <strong>títulos e negritos</strong>.</p>
-<pre><span class="selector">h1</span>,
-<span class="selector">h2</span>,
-<span class="selector">strong</span> {
+        <p>Para manter um contraste maior em alguns casos vamos escolher um tom mais escuro para <strong>títulos e negritos</strong> e aumentar o traço da fonte.</p>
+<pre><span class="selector">h1</span>, <span class="selector">h2</span>, <span class="selector">strong</span> {
   <span class="attribute">color</span>: <span class="number">#333</span>;
+  <span class="attribute">font-weight</span>: <span class="number">700</span>;
 }</pre>
         <p>E já melhorámos muito esta página visualmente, mas podemos destacar alguns elementos, como as partes de código, para serem mais fáceis de <a class="step" data-step="5" href="#balance">identificar</a>.</p>
       </section>
@@ -79,8 +78,7 @@
       <section id="balance" class="animate">
         <h2>Equilíbrio</h2>
         <p>Apenas uns toques para a página ficar mais equilibrada:</p>
-<pre><span class="selector">code</span>,
-<span class="selector">pre</span> {
+<pre><span class="selector">code</span>, <span class="selector">pre</span> {
   <span class="attribute">background</span>: <span class="number">#e4f0f5</span>;
 }
 
@@ -111,15 +109,14 @@
   <span class="attribute">color</span>: <span class="number">#566b78</span>;
 }
 
-<span class="selector">code</span>,
-<span class="selector">pre</span> {
+<span class="selector">code</span>, <span class="selector">pre</span> {
   <span class="attribute">background</span>: <span class="number">#f5f7f9</span>;
-  <span class="attribute">border-bottom</span>: <span class="number">1</span><span class="unit">px</span>solid<span class="number">#d8dee9</span>;
+  <span class="attribute">border-bottom</span>: <span class="number">1</span><span class="unit">px</span> solid<span class="number"> #d8dee9</span>;
   <span class="attribute">color</span>: <span class="number">#a7adba</span>;
 }
 
 <span class="selector">pre</span> {
-  <span class="attribute">border-left</span>: <span class="number">2</span><span class="unit">px</span>solid<span class="number">#69c</span>;
+  <span class="attribute">border-left</span>: <span class="number">2</span><span class="unit">px</span> solid<span class="number"> #69c</span>;
 }</pre>
         <p>E se mexemos nas cores porque não alterar também as <a class="step" data-step="8" href="#custom-font">formas</a>...</p>
       </section>
@@ -141,7 +138,7 @@
           <img src="images.png" alt="patos no lago">
         </h2>
         <p>Imagens, gráficos e ícones podem ser usados como complementos para ilustrar um conteúdo ou serem a própria mensagem que se deseja transmitir.</p>
-        <p>Vamos colocar uma imagem no <strong>cabeçalho desta página</strong>.</p>
+        <p>Vamos colocar uma imagem no <strong style="font-weight: 700;">cabeçalho desta página</strong>.</p>
 <pre><span class="selector">header</span> {
   <span class="attribute">background-color</span>: <span class="number">#263d36</span>;
   <span class="attribute">background-image</span>: url(<span class="string">"header.jpg"</span>);
