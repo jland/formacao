@@ -1,0 +1,83 @@
+body {
+  margin: 0 auto;
+  max-width: 50em;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  padding: 4em 1em;
+  color: #555;
+}
+
+header h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+  text-shadow: 0 0 8px #0055FF;
+}
+
+h1, h2, strong {
+  color: #333;
+  font-weight: 700;
+}
+
+section, footer {
+  background: #e4f0f5;
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+  background: #f5f7f9;
+  border-bottom: 1px solid #d8dee9;
+  color: #a7adba;
+  border-left: 2px solid #69c;
+}
+
+article {
+  padding: 1em;
+  font-family: "Roboto Mono", monospace;
+}
+
+a {
+  color: #e81c4f;
+}
+
+header {
+  line-height: 1.2;
+  padding: 2vw 2em;
+  text-align: center;
+}
+
+html {
+    background-image: url(header.jpg);
+    background-position: 0 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 25%;
+}
+
+header img {
+  display: inline-block;
+  height: 120px;
+  vertical-align: top;
+  width: 120px;
+}
+
+header h1 {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+header a, footer a {
+  border: 1px solid #e81c4f;
+  border-radius: 290486px;
+  color: white;
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
+}
+
+header a:hover, footer a:hover {
+  background:  #e81c4f;
+  color: white;
+}

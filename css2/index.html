@@ -23,7 +23,7 @@
         <h2>Conteúdo</h2>
         <p>O objetivo do <strong>design</strong> é melhorar a apresentação do conteúdo ao qual é aplicado. Pode parecer óbvio, mas o conteúdo, sendo o elemento <strong> principal </strong> de um website, não deve ser deixado para o fim.</p>
         <p>O conteúdo escrito, como este parágrafo que estás a ler agora, representa mais de 90% dos conteúdos da Web e o estilo que dás a um texto é uma grande ajuda para os leitores (ou não, e neste caso os visitantes não ficam muito tempo no teu site).</p>
-		  <p>Vamos supor que já tens um ficheiro <code>HTML</code> com alguns parágrafos de texto que queres publicar e também já criaste um arquivo <code>style.css</code> vazio e até o ligaste ao <code>HTML</code> com o elemento <a href="https://www.w3schools.com/css/css_howto.asp" target="_blank">link</a>, qual é a <a class="step" data-step="1" href="#centering">primeira declaração</a> que vais escrever?</p>
+		  <p>Vamos supor que já tens um ficheiro <code>HTML</code> com alguns parágrafos de texto que queres publicar (o ficheiro que copiaste antes) e também já criaste um arquivo <code>css</code> vazio e até o ligaste ao <code>HTML</code> com o elemento <a href="https://www.w3schools.com/css/css_howto.asp" target="_blank">link</a>, qual é a <a class="step" data-step="1" href="#centering">primeira declaração</a> que vais escrever?</p>
       </section>
 
       <section id="centering" class="animate">
@@ -54,9 +54,10 @@
   <span class="attribute">padding</span>: <span class="number">4</span><span class="unit">em</span> <span class="number">1</span><span class="unit">em</span>;
 }
 
-<span class="selector">h2</span> {
+<span class="selector">header h2</span> {
   <span class="attribute">margin-top</span>: <span class="number">1</span><span class="unit">em</span>;
   <span class="attribute">padding-top</span>: <span class="number">1</span><span class="unit">em</span>;
+  <span class="attribute">text-shadow</span>: <span class="number">0 0 8px #0055FF</span>;
 }</pre>
         <p>Apesar de termos melhorado todo o <i>layout</i> do site, ainda faltam <a class="step" data-step="4" href="#color-contrast">alguns pormenores</a>. &#128540;</p>
       </section>
@@ -72,22 +73,19 @@
   <span class="attribute">color</span>: <span class="number">#333</span>;
   <span class="attribute">font-weight</span>: <span class="number">700</span>;
 }</pre>
-        <p>E já melhorámos muito esta página visualmente, mas podemos destacar alguns elementos, como as partes de código, para serem mais fáceis de <a class="step" data-step="5" href="#balance">identificar</a>.</p>
+        <p>E já melhorámos muito esta página visualmente, mas podemos destacar alguns elementos, como seções, artigos e rodapé, para serem mais fáceis de <a class="step" data-step="5" href="#balance">identificar</a>.</p>
       </section>
 
       <section id="balance" class="animate">
         <h2>Equilíbrio</h2>
         <p>Apenas uns toques para a página ficar mais equilibrada:</p>
-<pre><span class="selector">code</span>, <span class="selector">pre</span> {
+<pre><span class="selector">section</span>, <span class="selector">footer</span> {
   <span class="attribute">background</span>: <span class="number">#e4f0f5</span>;
-}
-
-<span class="selector">code</span> {
   <span class="attribute">padding</span>: <span class="number">2</span>px <span class="number">4</span>px;
   <span class="attribute">vertical-align</span>: text-bottom;
 }
 
-<span class="selector">pre</span> {
+<span class="selector">article</span> {
   <span class="attribute">padding</span>: <span class="number">1</span>em;
 }</pre>
         <p>A partir daqui o objetivo é destacar a página e seguir uma <a class="step" data-step="6" href="#primary-color">linha gráfica</a>.</p>
@@ -105,30 +103,23 @@
       <section id="secondary-colors" class="animate">
         <h2>Cores secundárias</h2>
         <p>Uma cor de destaque pode ser complementada com tons mais <em>subtis</em>, para serem usados em molduras, planos de fundo ou até no corpo de texto.</p>
-<pre><span class="selector">body</span> {
-  <span class="attribute">color</span>: <span class="number">#566b78</span>;
-}
-
-<span class="selector">code</span>, <span class="selector">pre</span> {
+<pre><span class="selector">section</span>, <span class="selector">footer</span> {
   <span class="attribute">background</span>: <span class="number">#f5f7f9</span>;
   <span class="attribute">border-bottom</span>: <span class="number">1</span><span class="unit">px</span> solid<span class="number"> #d8dee9</span>;
   <span class="attribute">color</span>: <span class="number">#a7adba</span>;
-}
-
-<span class="selector">pre</span> {
   <span class="attribute">border-left</span>: <span class="number">2</span><span class="unit">px</span> solid<span class="number"> #69c</span>;
 }</pre>
         <p>E se mexemos nas cores porque não alterar também as <a class="step" data-step="8" href="#custom-font">formas</a>...</p>
       </section>
 
-      <section id="custom-font" class="animate"
+      <section id="custom-font" class="animate">
         <h2>Fonte personalizada</h2>
         <p>Como o texto é o conteúdo principal de um website, usar um tipo de <strong>letra personalizado</strong> dá mais carácter ao nosso site.</p>
-        <p>Podes carregar para o servidor qualquer tipo de webfont ou usar um serviço próprio <i>online</i>. Existem vários, alguns são pagos, mas hoje vamos usar a fonte <code>"Roboto"</code> do serviço gratuito <a href="https://fonts.google.com" target="_blank">Google Fonts</a>:</p>
-<pre><span class="keyword">@import</span> <span class="string">'https://fonts.googleapis.com/css?family=Roboto:300,400,500'</span>;
+        <p>Podes carregar para o servidor qualquer tipo de webfont ou usar um serviço próprio <i>online</i>. Existem vários, alguns são pagos, mas hoje vamos usar a fonte <code>"Roboto"</code> do serviço gratuito <a href="https://fonts.google.com" target="_blank">Google Fonts</a>. A primeira parte é um elemento para a <code>head</code> do ficheiro HTML:</p>
+<pre><span class="keyword">link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet"</span>
 
-<span class="selector">body</span> {
-  <span class="attribute">font-family</span>: <span class="string">"Roboto"</span>, <span class="string">"Helvetica"</span>, <span class="string">"Arial"</span>, sans-serif;
+<span class="selector">article</span> {
+  <span class="attribute">font-family</span>: <span class="string">"Roboto Mono"</span>, monospace;
 }</pre>
         <p>Mas não é só de <em>texto</em> que é feito um website, aliás existe um tipo de conteúdo que vale por <a class="step" data-step="9" href="#images">mil palavras</a>...</p>
       </section>
@@ -140,16 +131,19 @@
         <p>Imagens, gráficos e ícones podem ser usados como complementos para ilustrar um conteúdo ou serem a própria mensagem que se deseja transmitir.</p>
         <p>Vamos colocar uma imagem no <strong style="font-weight: 700;">cabeçalho desta página</strong>.</p>
 <pre><span class="selector">header</span> {
-  <span class="attribute">background-color</span>: <span class="number">#263d36</span>;
-  <span class="attribute">background-image</span>: url(<span class="string">"header.jpg"</span>);
-  <span class="attribute">background-position</span>: center top;
-  <span class="attribute">background-repeat</span>: no-repeat;
-  <span class="attribute">background-size</span>: cover;
   <span class="attribute">line-height</span>: <span class="number">1.2</span>;
-  <span class="attribute">padding</span>: <span class="number">10</span><span class="unit">vw</span> <span class="number">2</span><span class="unit">em</span>;
+  <span class="attribute">padding</span>: <span class="number">2</span><span class="unit">vw</span> <span class="number">2</span><span class="unit">em</span>;
   <span class="attribute">text-align</span>: center;
+}
+
+<span class="selector">html</span> {
+    <span class="attribute">background-image</span>: url(<span class="string">"header.jpg"</span>);
+    <span class="attribute">background-position</span>: 0 75%;
+    <span class="attribute">background-repeat</span>: no-repeat;
+    <span class="attribute">background-size</span>: 25%;
+    <span class="attribute">max-height</span>: center;
 }</pre>
-        <p>Colocamos também um <strong>logotipo</strong></p>
+        <p>Colocamos também um <strong>logotipo</strong> (a imagem é definida no HTML, o CSS só vai enquadrá-la no <em>layout</em>)</p>
 <pre><span class="selector">header img</span> {
   <span class="attribute">display</span>: inline-block;
   <span class="attribute">height</span>: <span class="number">120</span><span class="unit">px</span>;
@@ -163,7 +157,7 @@
   <span class="attribute">font-weight</span>: <span class="number">300</span>;
 }
 
-<span class="selector">header a</span> {
+<span class="selector">header a, footer a</span> {
   <span class="attribute">border</span>: <span class="number">1</span><span class="unit">px</span> solid <span class="number">#e81c4f</span>;
   <span class="attribute">border-radius</span>: <span class="number">290486</span><span class="unit">px</span>;
   <span class="attribute">color</span>: white;
@@ -176,11 +170,11 @@
   <span class="attribute">transition-property</span>: color, background;
 }
 
-<span class="selector">header a:hover</span> {
+<span class="selector">header a:hover, footer a:hover</span> {
   <span class="attribute">background</span>:  <span class="number">#e81c4f</span>;
   <span class="attribute">color</span>: white;
 }</pre>
-        <p>E pronto! Construimos uma página decente em alguns minutos, seguindo alguns princípios de design e com código <code>HTML</code> e <code>CSS</code>. Agora só falta uma última <a class="step" data-step="10" href="#footer">coisa</a>...</p>
+        <p>E pronto! Construimos uma página decente em pouco tempo, seguindo alguns princípios de design e com código <code>HTML</code> e <code>CSS</code>. Agora só falta acrescentares as imagens e alterares algum código de acordo com as características próprias do teu conteúdo (experimenta criar <em>links</em> no cabeçalho e rodapé), e uma última <a class="step" data-step="10" href="#footer">coisa</a>...</p>
       </section>
 
       <footer id="footer" class="animate">
